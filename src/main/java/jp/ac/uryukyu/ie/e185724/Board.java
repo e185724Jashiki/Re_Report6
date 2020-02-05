@@ -11,16 +11,49 @@ public class Board {
     char[] xCoordinate = {'a','b','c','d','e','f'};
     char[] yCoordinate = {'1','2','3','4','5','6'};
 
+    boolean gameEnd;
+
     /**
      * コンストラクタ
      *
      */
-    Board() {
+    Board () {
         System.out.println("初期石配置");
         mass[2][2] = 'W';
         mass[3][3] = 'W';
         mass[2][3] = 'B';
         mass[3][2] = 'B';
+
+        gameEnd = false;
+    }
+
+    /**
+     * 盤の表示のみを行うメソッド
+     *
+     */
+    void ToDisplay () {
+        System.out.print("  ");
+        for (char c : xCoordinate) {
+            System.out.print(" " + c + " ");
+        }
+        System.out.println();
+
+        for (int i = 0; i < 6; i++) {
+            System.out.print(yCoordinate[i] + " ");
+
+            for (int j = 0; j < 6; j++) {
+                if (mass[i][j] == 'N') {
+                    System.out.print(" - ");
+                }
+                else if (mass[i][j] == 'B') {
+                    System.out.print(" ● ");
+                }
+                else if (mass[i][j] == 'W') {
+                    System.out.print(" ◯ ");
+                }
+            }
+            System.out.println("");
+        }
     }
 
 
