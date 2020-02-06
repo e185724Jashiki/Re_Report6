@@ -1,5 +1,6 @@
 package jp.ac.uryukyu.ie.e185724;
 
+
 public class Board {
     char[][] mass = {
             {'N','N','N','N','N','N'},
@@ -38,10 +39,10 @@ public class Board {
         }
         System.out.println();
 
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < mass.length; i++) {
             System.out.print(yCoordinate[i] + " ");
 
-            for (int j = 0; j < 6; j++) {
+            for (int j = 0; j < mass[0].length; j++) {
                 if (mass[i][j] == 'N') {
                     System.out.print(" - ");
                 }
@@ -56,5 +57,7 @@ public class Board {
         }
     }
 
+    void PutStone (String str) {
 
+    }
 }
