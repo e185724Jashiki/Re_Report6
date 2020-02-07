@@ -35,13 +35,12 @@ public class Main {
                 } else if (board.playingPlayer == 'B') {
                     System.out.println("黒の番です。");
                 }
-
                 System.out.print("どのマスへ置く？：");
                 inputStr = scanner.nextLine();
-
                 turnEnd = board.PutStone(inputStr);
             }
-
+            white.StoneCount(board.mass);
+            black.StoneCount(board.mass);
             board.gameEnd = false;
         }
     }
