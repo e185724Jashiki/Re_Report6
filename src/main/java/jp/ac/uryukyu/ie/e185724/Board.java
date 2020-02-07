@@ -1,6 +1,5 @@
 package jp.ac.uryukyu.ie.e185724;
 
-
 public class Board {
     char[][] mass = {
             {'N','N','N','N','N','N'},
@@ -54,7 +53,7 @@ public class Board {
 
     /**
      * 石を置くメソッド
-     * 座標とプレイヤーを引数で指定して，石を置いて盤の情報を書き換える。
+     * 座標を引数で指定して，石を置いて盤の情報を書き換える。
      * @param str 石を置きたい座標
      * @return 正常に置き終えたならtrue，問題が生じて置けなかった場合はfalseを返す
      */
