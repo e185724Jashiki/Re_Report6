@@ -16,11 +16,22 @@ public class Main {
             board.ToDisplay();  //盤の表示
             System.out.printf("白：%d個   黒：%d個\n", white.stoneNum, black.stoneNum);
 
-            System.out.print("どのマスへ置く？：");
-            inputStr = scanner.nextLine();
-            System.out.println("入力は" + inputStr + "です。");
+            boolean turnEnd = false;
+            while (turnEnd != true) {
+                if (board.playingPlayer == 'W') {
+                    System.out.println("白の番です。");
+                }
+                else if (board.playingPlayer == 'B') {
+                    System.out.println("黒の番です。");
+                }
 
-            board.gameEnd = true;
+                System.out.print("どのマスへ置く？：");
+                inputStr = scanner.nextLine();
+
+                turnEnd = board.PutStone(inputStr);
+            }
+
+            board.gameEnd = false;
         }
     }
 }
