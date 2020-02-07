@@ -14,23 +14,6 @@ public class Player {
         stoneNum = 0;
     }
     /**
-     * コンストラクタ（char型引数）
-     * @param color 第1引数：自分の色
-     */
-    Player (char color) {
-        this.color = color;
-        stoneNum = 0;
-    }
-    /**
-     * コンストラクタ（char型引数, int型引数）
-     * @param color 第1引数：自分の色
-     * @param stoneNum 第2引数：所持している石の数
-     */
-    Player (char color, int stoneNum) {
-        this.color = color;
-        this.stoneNum = stoneNum;
-    }
-    /**
      * コンストラクタ（char型引数, char型多重配列の引数）
      * @param color 第1引数：自分の色
      * @param mass 第2引数：オセロ盤の状態を示す多次元配列
@@ -51,8 +34,7 @@ public class Player {
             for (int j=0; j<mass[0].length; j++) {
                 if ((color == 'W') && (mass[i][j] == color)) {
                     stoneNum++;
-                }
-                else if ((color == 'B') && (mass[i][j] == color)) {
+                } else if ((color == 'B') && (mass[i][j] == color)) {
                     stoneNum++;
                 }
             }

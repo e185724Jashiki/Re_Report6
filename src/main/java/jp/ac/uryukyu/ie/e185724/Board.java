@@ -39,11 +39,9 @@ public class Board {
             for (int j = 0; j < mass[0].length; j++) {
                 if (mass[i][j] == 'N') {
                     System.out.print(" - ");
-                }
-                else if (mass[i][j] == 'B') {
+                } else if (mass[i][j] == 'B') {
                     System.out.print(" ● ");
-                }
-                else if (mass[i][j] == 'W') {
+                } else if (mass[i][j] == 'W') {
                     System.out.print(" ◯ ");
                 }
             }
@@ -89,8 +87,7 @@ public class Board {
 
                                      */
                                     return true;
-                                }
-                                else {
+                                } else {
                                     System.out.println("既に置かれています。");
                                 }
                                 break;

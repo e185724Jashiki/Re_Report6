@@ -19,13 +19,10 @@ public class Main {
             if ((inputStr.equals("W")) || (inputStr.equals("B"))) {
                 board.playingPlayer = inputStr.charAt(0);
                 WorB = true;
-            }
-            else {
+            } else {
                 System.out.print("半角で，WかBを入力する必要があります。");
             }
         }
-
-
 
         while (!board.gameEnd) {
             board.ToDisplay();  //盤の表示
@@ -35,8 +32,7 @@ public class Main {
             while (turnEnd != true) {
                 if (board.playingPlayer == 'W') {
                     System.out.println("白の番です。");
-                }
-                else if (board.playingPlayer == 'B') {
+                } else if (board.playingPlayer == 'B') {
                     System.out.println("黒の番です。");
                 }
 
