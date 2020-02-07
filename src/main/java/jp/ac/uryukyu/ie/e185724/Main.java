@@ -10,14 +10,15 @@ public class Main {
         Player black = new Player('B', board.mass);
 
         Scanner scanner = new Scanner(System.in);
-        String inputStr = scanner.nextLine();
-
-        board.ToDisplay();  //盤の表示
-        System.out.printf("白：%d個   黒：%d個\n", white.stoneNum, black.stoneNum);
+        String inputStr;
 
         while (!board.gameEnd) {
+            board.ToDisplay();  //盤の表示
+            System.out.printf("白：%d個   黒：%d個\n", white.stoneNum, black.stoneNum);
+
             System.out.print("どのマスへ置く？：");
-            //System.out.println(inputStr);
+            inputStr = scanner.nextLine();
+            System.out.println("入力は" + inputStr + "です。");
 
             board.gameEnd = true;
         }
