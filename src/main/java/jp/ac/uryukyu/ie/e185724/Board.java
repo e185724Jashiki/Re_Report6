@@ -77,15 +77,13 @@ public class Board {
                                 //既に石が置かれていないか。
                                 if (mass[y][x] == 'N') {
                                     mass[y][x] = playingPlayer;
-                                    /*
+
                                     if (playingPlayer == 'W') {
                                         playingPlayer = 'B';
                                     }
                                     else if (playingPlayer == 'B') {
                                         playingPlayer = 'W';
                                     }
-
-                                     */
                                     return true;
                                 } else {
                                     System.out.println("既に置かれています。");
