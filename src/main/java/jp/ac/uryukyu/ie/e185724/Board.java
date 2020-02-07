@@ -77,14 +77,18 @@ public class Board {
                         for (int y=0; y<yCoordinate.length; y++) {
                             //指定した座標が確定
                             if (numberCoordinate == yCoordinate[y]) {
+                                //既に石が置かれていないか。
                                 if (mass[y][x] == 'N') {
                                     mass[y][x] = playingPlayer;
+                                    /*
                                     if (playingPlayer == 'W') {
                                         playingPlayer = 'B';
                                     }
                                     else if (playingPlayer == 'B') {
                                         playingPlayer = 'W';
                                     }
+
+                                     */
                                     return true;
                                 }
                                 else {

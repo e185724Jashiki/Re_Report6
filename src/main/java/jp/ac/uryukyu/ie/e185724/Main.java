@@ -12,6 +12,21 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String inputStr;
 
+        boolean WorB = false;
+        while (WorB != true) {
+            System.out.print("先攻を選択してください（白ならW，黒ならBと入力）：");
+            inputStr = scanner.nextLine();
+            if ((inputStr.equals("W")) || (inputStr.equals("B"))) {
+                board.playingPlayer = inputStr.charAt(0);
+                WorB = true;
+            }
+            else {
+                System.out.print("半角で，WかBを入力する必要があります。");
+            }
+        }
+
+
+
         while (!board.gameEnd) {
             board.ToDisplay();  //盤の表示
             System.out.printf("白：%d個   黒：%d個\n", white.stoneNum, black.stoneNum);
