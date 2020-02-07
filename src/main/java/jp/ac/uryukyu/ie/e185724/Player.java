@@ -6,7 +6,7 @@ public class Player {
     int stoneNum = 0;   //所持している石の数
 
     /**
-     * コンストラクタ
+     * コンストラクタ（引数なし）
      * 引数指定がないため，colorにはとりあえず'W'を代入する
      */
     Player () {
@@ -41,7 +41,7 @@ public class Player {
     }
 
     /**
-     * オセロ盤上を読み取り，自分の石の数をカウントしてstoneNumへ代入するメソッド
+     * オセロ盤を読み取り，自分の石の数をカウントしてstoneNumへ代入するメソッド
      * @param mass オセロ盤の状態を示す多次元配列
      */
     void StoneCount (char[][] mass) {

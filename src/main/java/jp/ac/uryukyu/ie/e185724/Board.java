@@ -57,6 +57,10 @@ public class Board {
         }
     }
 
+    /**
+     * 盤の表示のみを行うメソッド
+     *
+     */
     void PutStone (String str) {
 
     }
